@@ -38,7 +38,7 @@ print(f"[V][A][G][{style.GRAY}U{style.RESET}][E]\nThe letter {style.BOLD}U{style
 print(f"If you would like to view a keyboard of letters to see which ones you have used, type {style.BOLD}KEYBOARD{style.RESET}.\n")
 print(f"Good luck!{style.RESET}\n")
 
-selectedWord = wordlist[int(random() * len(wordlist))]
+selectedWord = "crazy"
 guesses: int = 0
 won = False
 lost = False
@@ -64,7 +64,7 @@ while (won != True or lost != True) and guesses < 6:
                 continue
             if guess[letterIndex] == selectedWord[letterIndex]:
                 responsePart = f"[{style.GREEN}{guess[letterIndex].upper()}{style.RESET}]"
-                keyboard = keyboard.replace(f"[{guess[letterIndex].upper()}]", responsePart)
+                keyboard = keyboard.replace(f"[{guess[letterIndex].upper()}]", responsePart).replace(f"{style.YELLOW}{guess[letterIndex].upper()}{style.RESET}", responsePart)
                 responseParts.append(responsePart)
                 continue
             else:
