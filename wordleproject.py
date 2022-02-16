@@ -38,7 +38,7 @@ print(f"[V][A][G][{style.GRAY}U{style.RESET}][E]\nThe letter {style.BOLD}U{style
 print(f"If you would like to view a keyboard of letters to see which ones you have used, type {style.BOLD}KEYBOARD{style.RESET}.\n")
 print(f"Good luck!{style.RESET}\n")
 
-selectedWord = "crazy"
+selectedWord = wordlist[int(random() * len(wordlist))]
 guesses: int = 0
 won = False
 lost = False
